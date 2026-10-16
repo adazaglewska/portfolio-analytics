@@ -9,3 +9,10 @@
 3) przypisanie jako nadpisanie wartości (kumulowanie)
 4) pętla z indeksami i porównywanie obecnych indeksów z poprzednimi
 5) stopa zwrotu
+------16.10.2026-------------
+1) zbieranie wyników do listy (append)
+2) funkcje agregujące: max(), sum()
+3) stopa łączna z cen: (ceny[-1] - ceny[0]) / ceny[0]
+4) zagadka: stóp zwrotu się nie dodaje, tylko składa (mnożenie czynników 1+r)
+5) formatowanie procentów :.2% (do dokończenia)
+Następny raz: dokończyć formatowanie :.2%, potem krok 2 (if - ochrona przed za krótką/pustą listą) i krok 3 (try/except - ochrona przed ceną 0)
