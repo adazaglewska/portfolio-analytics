@@ -1,0 +1,22 @@
+ceny = [100, 0, 99, 105]
+lista_stop_zwrotu = []
+if len(ceny) < 2:
+    print("Za mało cen na liście")
+else:
+    for i in range(1, len(ceny)):
+        cena_dzis = ceny[i]
+        cena_wczoraj = ceny[i - 1]
+        try:
+            stopa_zwrotu = ((cena_dzis - cena_wczoraj) / cena_wczoraj) 
+            lista_stop_zwrotu.append(stopa_zwrotu)
+            print(f"Dzien: {i}: {stopa_zwrotu:.2%}")
+        except ZeroDivisionError:
+            print(f"Dzien {i}: cena wczorajsza = 0, pomijam")
+    max_dzienna_stopa = max(lista_stop_zwrotu)
+    suma_dzienna_stop = sum(lista_stop_zwrotu)
+    stopa_laczna_cen = (ceny[-1] - ceny[0]) / ceny[0]
+    print(max_dzienna_stopa)
+    print(suma_dzienna_stop)
+    print(stopa_laczna_cen)
+
+

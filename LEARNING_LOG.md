@@ -16,3 +16,10 @@
 4) zagadka: stóp zwrotu się nie dodaje, tylko składa (mnożenie czynników 1+r)
 5) formatowanie procentów :.2% (do dokończenia)
 Następny raz: dokończyć formatowanie :.2%, potem krok 2 (if - ochrona przed za krótką/pustą listą) i krok 3 (try/except - ochrona przed ceną 0)
+------20.10.2026-------------
+1) if - strażnik przed liczeniem (ochrona przed za krótką listą, len(ceny) < 2)
+2) kolejność: sprawdź dane -> zbieraj w pętli -> agregaty PO pętli
+3) try/except - ochrona przed ceną 0 (ZeroDivisionError), łapanie konkretnego błędu
+4) operacje zależne od ryzykownej linii trzymamy razem w try (liczenie+append+print)
+5) zabezpieczenie ma nie zostawiać cichego błędu w danych ani w logu
+Następny raz: formatowanie procentów :.2% dla agregatów (ujednolicić wydruki), potem funkcje (def, return, parametry vs argumenty)
