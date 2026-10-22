@@ -1,0 +1,29 @@
+def oblicz_stope_zwrotu(cena_poczatkowa, cena_koncowa):
+    return (cena_koncowa - cena_poczatkowa) / cena_poczatkowa
+
+ceny = [100, 0, 99, 105]
+lista_stop_zwrotu = []
+if len(ceny) <2 :
+    print(" Na liscie jest za malo cen")
+else:
+    for i in range(1,len(ceny)):
+        cena_wczoraj = ceny[i-1]
+        cena_dzis = ceny[i]
+        try:
+            x = oblicz_stope_zwrotu(cena_wczoraj, cena_dzis)
+            lista_stop_zwrotu.append(x)
+            print(f"Dzien: {i}: {x:.2%}")
+        except ZeroDivisionError:
+            print(f"Dzien {i}: cena wczorajsza = 0, pomijam")
+
+    max_dzienna_stopa = max(lista_stop_zwrotu)
+    suma_dzienna_stop = sum(lista_stop_zwrotu)
+    stopa_laczna_cen = (ceny[-1] - ceny[0]) / ceny[0]
+    print(f"max: {max_dzienna_stopa:.2%}")
+    print(f"suma: {suma_dzienna_stop:.2%}")
+    print(f"stopa łączna: {stopa_laczna_cen:.2%}")
+
+
+# print(f"{oblicz_stope_zwroty(200, 150):.2%}")
+# print(f" {oblicz_stope_zwroty(100,120):.2%}")
+

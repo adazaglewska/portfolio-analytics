@@ -1,4 +1,4 @@
-ceny = [100, 0, 99, 105]
+ceny = [100, 110, 99, 105]
 lista_stop_zwrotu = []
 if len(ceny) < 2:
     print("Za mało cen na liście")
@@ -15,8 +15,8 @@ else:
     max_dzienna_stopa = max(lista_stop_zwrotu)
     suma_dzienna_stop = sum(lista_stop_zwrotu)
     stopa_laczna_cen = (ceny[-1] - ceny[0]) / ceny[0]
-    print(max_dzienna_stopa)
-    print(suma_dzienna_stop)
-    print(stopa_laczna_cen)
+    print(f"max: {max_dzienna_stopa:.2%}")
+    print(f"suma: {suma_dzienna_stop:.2%}")
+    print(f"stopa łączna: {stopa_laczna_cen:.2%}")
 
 
